@@ -23,7 +23,7 @@ const son = {
     address : '서울'
 }
 
-for(key in son) {
+for(let key in son) {
     console.log(key, son[key]);
 }
 
