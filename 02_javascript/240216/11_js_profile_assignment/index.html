@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -43,5 +43,51 @@
             <span class="d-inline-block rounded-circle"></span>
         </nav>
     </section>
+    <script>
+        let navi_link = document.querySelectorAll('.others > span');
+        let obj_list = [
+            { name: '지수', img: 'https://i.namu.wiki/i/qDWo7jnTiRCv71Nftf_wd__oRbfOFGdMBibGDMpy0lKEadTQB9pva96Qs7PGhFUd3rs87kcWIQXl3Jg6Shur72xhjQ0JdSO5S55RZ6E52fdTjznVvQFIbAiJh-jDNwmxqx9c9fGbr5JwUOvQziBEVw.webp' },
+            { name: '제니', img: 'https://i.namu.wiki/i/vkX2H8O6IFQdaqKbXOxuiy6QwBg6O-sjK6ESxTeMCYx4FwEzaFZtvSLIViRpxN-4C6j8YfXjYy_wtn-fGi3FBpCJD_wrOPyfn7Baui6UxdV5t2pin5k13gsmK8t9vV0QBPBXlhavMgPncpQ4Lteh8Q.webp' },
+            { name: '로제', img: 'https://i.namu.wiki/i/ep26Ie58oBuPNXMc4-2cyf4hnO5HX2emfkFfoALQBfxBLw9WlZm7ImmZcGee8DaufXSXpsv4NcOyruSqMw21Yq1E97hMkd8b4e3f_0RqHratjOb_1TqaZkhbZ4-wTIKYUyS6YjexNVn0lfDmh-YqLQ.webp' },
+            { name: '리사', img: 'https://i.namu.wiki/i/KBTAHQQJPqUVciXCI3qxBnjxbY9V5VEcYA5Afn8OQL6iEJ3qqZpCyFi7yxcnIizVU4lIePxxT0bKiciqReL7amM65mYpytDjcJBaGa_6NOB6S34ECmHxUNIcJKb6KiSR9cfVoFc5K4NZjyiBo4Hy2w.webp' },
+        ]
+
+        for (let i = 0; i < navi_link.length; i++) {
+            navi_link[i].onclick = function () {
+                document.body.className = `member${i+1}`;
+
+                let name = document.querySelector('article.profile h2');
+                let img = document.querySelector('article.profile img');
+                name.innerText = obj_list[i].name;
+                img.src = obj_list[i].img;
+
+                for(let elem of navi_link) {
+                    if (elem === navi_link[i]) {
+                        elem.classList.add('on');
+                    } else {
+                        elem.classList.remove('on');
+                    }
+                }
+            }
+        }
+
+        // navi_link[0].onclick = function () {
+        //     alert('지수');
+        // }
+
+        // navi_link[1].onclick = function () {
+        //     alert('제니');
+        // }
+
+        // navi_link[2].onclick = function () {
+        //     alert('로제');
+        // }
+
+        // navi_link[3].onclick = function () {
+        //     alert('리사');
+        // }
+
+    </script>
 </body>
+
 </html>
