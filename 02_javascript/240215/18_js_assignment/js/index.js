@@ -20,3 +20,20 @@ while (1) {
         alert('Down ↓');
     }
 }
+let num;
+let count = 1;
+while (num !== answer) {
+    num = Number(prompt('숫자를 입력해주세요'));
+    if (num <= 0) {
+        alert(`0보다 큰 숫자 입력하세요`);
+    } else if (num > answer) {
+        count += 1;
+        alert("down");
+    } else if (num < answer) {
+        count += 1;
+        alert(`up`);
+    } else if (!num) {
+        alert(`숫자 입력하세요`)
+    }
+}
+alert(` ${count}번만에 성공 ! 정답은 ${num}이었습니다`)
