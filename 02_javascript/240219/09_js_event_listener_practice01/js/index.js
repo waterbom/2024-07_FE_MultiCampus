@@ -1,5 +1,10 @@
 // 마우스 오버하면 이미지가 바뀌도록
-
+let img = document.querySelector('img');
+let index = 2;
+img.addEventListener("mouseover", () => {
+    img.src = `images/pic-${index % 6 + 1}.jpg`;
+    index++;
+});
 
 /* 
 click	사용자가 동일한 요소 위에서 마우스 버튼을 눌렀다 땔 때
