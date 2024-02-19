@@ -22,7 +22,7 @@ btn.onclick = () => {
 
     let result = "";
     result += subjectRadio.value + ", ";
-    for (let i in mailingCheck) {
+    for (let i=0; i < mailingCheck.length; i++) {
         result += mailingCheck[i].value + ", ";
     }
     // for (let e of mailingCheck) {
