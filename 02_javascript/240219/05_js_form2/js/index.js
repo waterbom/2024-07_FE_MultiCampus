@@ -14,6 +14,13 @@ selectMajor.onchange = () => {
 
 let btn = document.querySelector('#send');
 btn.onclick = () => {
+    // let subject = document.getElementsByName('subject');
+    // let option;
+    // for (let i=0;i<subject.length;i++) {
+    //     option = subject[i].value;
+    //     break;
+    // }
+
     let subjectRadio = document.querySelector("input[name='subject']:checked");
     console.log(subjectRadio);
 
@@ -21,8 +28,15 @@ btn.onclick = () => {
     console.log(mailingCheck);
 
     let result = "";
+
     result += subjectRadio.value + ", ";
-    for (let i=0; i < mailingCheck.length; i++) {
+
+    console.log('로그');
+    console.error('에러');
+    console.warn('워닝');
+    console.info('인포');
+    console.debug('디버그');
+    for(let i=0; i<mailingCheck.length;i++){
         result += mailingCheck[i].value + ", ";
     }
     // for (let e of mailingCheck) {
