@@ -10,3 +10,11 @@ mousemove	마우스를 움직였을 때
 mouseover	요소 위로 마우스를 움직였을 때
 mouseout	요소 바깥으로 마우스를 움직였을 때
 */
+
+
+let btn = document.querySelector('img');
+let i = 1;
+btn.addEventListener("mouseover", () => {
+    btn.src = `images/pic-${i % 6 + 1}.jpg`;
+    i++;
+});
