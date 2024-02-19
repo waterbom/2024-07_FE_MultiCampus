@@ -3,26 +3,31 @@
 let orderBtn = document.querySelector('#orderBtn');
 
 orderBtn.onclick = () => {
+    console.log(document.order.prod.value);
     if (!document.order.prod.value) {
         alert('상품명을 입력하세요');
         document.order.prod.focus();
         return false;
     }
+    console.log(document.order['prodNum'].value);
     if (!document.order['prodNum'].value) {
         alert('수량을 입력하세요');
         document.order.prodNum.focus();
         return false;
     }
+    console.log(document.querySelector('#order-name').value);
     if (!document.querySelector('#order-name').value) {
         alert('주문자명을 입력하세요');
         document.order.orderName.focus();
         return false;
     }
+    console.log(document.querySelector('#order-tel').value);
     if (!document.querySelector('#order-tel').value) {
         alert('전화번호를 입력하세요');
         document.querySelector('#order-tel').focus();
         return false;
     }
+    console.log(document.querySelector('#order-addr').value);
     if (!document.querySelector('#order-addr').value) {
         alert('받을 주소지를 입력하세요');
         document.order.orderAddr.focus();
