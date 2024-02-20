@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    <h1>노드 만들기</h1>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+    <!-- 여기에 넣고 싶어요 -->
+    <script>
+        let newP = document.createElement("p");
+        let textNode = document.createTextNode('Python');
+        newP.appendChild(textNode);
+        // newP.innerText = "python";
+        document.body.appendChild(newP);
+    </script>
+</body>
+</html>
