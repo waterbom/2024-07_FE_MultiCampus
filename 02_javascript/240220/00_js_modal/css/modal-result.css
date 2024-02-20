@@ -4,6 +4,7 @@ button {
     border: none;
     border-radius: 5px;
     padding: 15px;
+    cursor: pointer;
 }
 
 #modal-box.active {
