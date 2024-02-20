@@ -16,7 +16,19 @@
         let textNode = document.createTextNode('Python');
         newP.appendChild(textNode);
         // newP.innerText = "python";
-        document.body.appendChild(newP);
+        
+        // document.body.appendChild(newP);
+        
+        // let h1 = document.querySelector('h1');
+        // document.body.insertBefore(newP, h1);
+
+        let javascript = document.querySelector('p:nth-child(4)');
+        document.body.insertBefore(newP, javascript);
+
+        /* 특정 노드 삭제 */
+        let h1 = document.querySelector('h1');
+        // h1.remove();
+        // document.body.removeChild(h1); -> IE
     </script>
 </body>
 </html>
