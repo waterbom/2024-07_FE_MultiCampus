@@ -6,7 +6,7 @@ button {
     padding: 15px;
 }
 
-#modal-box {
+#modal-box.active {
     position: fixed;
     top: 0;
     left: 0;
