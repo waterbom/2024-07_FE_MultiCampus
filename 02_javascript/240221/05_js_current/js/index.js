@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(today);
     console.log(today.toDateString());
     const week = ['일', '월', '화', '수', '목', '금', '토'];
-
+    
     function clock() {
+        console.log(today.getMilliseconds());
         today = new Date();
-
+        
         const todayObj = {
             year: today.getFullYear(),
             month: today.getMonth() + 1,
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             min: today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes(),
             sec: today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds()
         }
-
+    
         const todayDiv = document.querySelector('#today')
         todayDiv.innerHTML = `
                 ${todayObj.year}년 ${todayObj.month}월 ${todayObj.date}일 <span>${todayObj.day}</span>
