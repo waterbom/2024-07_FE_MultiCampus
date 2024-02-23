@@ -1,24 +1,37 @@
 const user = {};
 
+function err(e, msg) {
+    e.currentTarget.parentElement.querySelector('.alert').innerText = msg;
+}
+
+function clearErr(e) {
+    e.currentTarget.parentElement.querySelector('.alert').innerText = '';
+}
+
 // 이름 : 5글자까지만 입력
 const input_name = document.signupForm.name;
-input_name.addEventListener('blur', ()=>{
+input_name.addEventListener('blur', (e)=>{
     input_name.value = input_name.value.replaceAll(" ", "");
     if (input_name.value != '' && input_name.value.length > 5) {
-        alert('5글자 이내만 사용가능합니다.');
+        err(e, '5글자 이내만 사용가능합니다.');
         input_name.value = input_name.value.slice(0, 5);
+        
+    } else {
+        clearErr(e);
     }
     user.name = input_name.value;
 })
 
 // 아이디 : 5~20글자까지 제한, 소문자로 저장, 중복여부 체크
 const input_id = document.signupForm.id;
-input_id.addEventListener('blur', () => {
+input_id.addEventListener('blur', (e) => {
     input_id.value = input_id.value.replaceAll(" ", "").toLowerCase();
     if (input_id.value != '' && (input_id.value.length < 5 || input_id.value.length > 20)) {
-        alert('5~20글자까지만 사용가능합니다.');
+        err(e, '5~20글자까지만 사용가능합니다.');
         input_id.value = '';
-    } 
+    } else {
+        clearErr(e);
+    }
     // 중복 체크
     user.id = input_id.value;
 })
