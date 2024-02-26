@@ -30,8 +30,16 @@
     background-color: #0056b3;
 }
 
+.comment-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
 .comment {
     margin-bottom: 10px;
+    list-style: none;
 }
 
 .comment .actions {

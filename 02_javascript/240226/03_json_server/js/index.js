@@ -10,6 +10,7 @@ let getComment = () => {
             else throw new Error('서버 오류 : ' + response.status);
         }).then(comments => {
             // 데이터 화면에 곱게 뿌려주기
+            cmtList.innerHTML = '';
             comments.forEach(comment => {
                 const cmtElement = createCmtElement(comment);
                 cmtList.appendChild(cmtElement);
@@ -49,12 +50,20 @@ function createCmtElement(comment) {
     })
 
     saveBtn.addEventListener('click', () => {
-        
+        comment.msg = newCmtInput.value;
+        fetch('http://localhost:3000/comments/' + comment.id, {
+            method: "PUT",
+            headers: { 'Content-type' : 'application/json'},
+            body: JSON.stringify(comment)
+        }).then(response => {
+            if (response.ok) getComment();
+            else throw new Error('서버 오류 : ' + response.status);
+        }).catch(error => console.error('수정 오류', error));
     })
 
 
     deleteBtn.addEventListener('click', () => {
-        fetch('http://localhost:3000/comments'+ comment.id, {
+        fetch('http://localhost:3000/comments/'+ comment.id, {
             method: "DELETE"
         }).then(response => {
             if (response.ok) getComment();
