@@ -9,9 +9,9 @@ window.addEventListener('load', () => {
     let x_img = sessionStorage.getItem('bg');
     
     console.log(x_img, imgArr[randomNum]);
-    while (x_img == imgArr[randomNum] && imgArr.length != 1) {
-        randomNum = Math.floor(Math.random() * imgArr.length);
-    }
+    // while (x_img == imgArr[randomNum] && imgArr.length != 1) {
+    //     randomNum = Math.floor(Math.random() * imgArr.length);
+    // }
     
     sessionStorage.setItem('bg', imgArr[randomNum]);
     document.body.style.backgroundImage = `url(./images/${imgArr[randomNum]})`

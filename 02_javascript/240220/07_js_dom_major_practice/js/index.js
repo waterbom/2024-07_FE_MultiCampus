@@ -21,8 +21,8 @@ let add = () => {
         tr.appendChild(tdMajor); // <tr><td>홍길동</td><td>컴퓨터</td></tr>
 
         document.querySelector('#attendant > tbody').appendChild(tr);
-        name.value = '';
-        major.value = '';
+        // name.value = '';
+        // major.value = '';
         document.querySelector('#username').focus();
     }
 }

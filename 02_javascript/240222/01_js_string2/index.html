@@ -20,6 +20,7 @@
         // let title_sub = title.innerText.slice(7, 11);
         // let title_sub = title.innerText.slice(-9, 11);
         let title_sub = title.innerText.slice(7, -5);
+        console.log(title_sub);
         let first_letter = title_sub[0].toUpperCase();
         let other_letters = title_sub.substring(1);
         title.innerText = first_letter + other_letters + "~";

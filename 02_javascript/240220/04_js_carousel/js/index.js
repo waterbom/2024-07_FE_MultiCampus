@@ -12,7 +12,7 @@ for (let arrow of arrows) {
 //     arrow.addEventListener('click', arrow_func);
 // })
 
-setInterval(arrow_func, 3000);
+// setInterval(arrow_func, 3000);
 
 function arrow_func(e) {
     if (e?.target.id == 'left') {

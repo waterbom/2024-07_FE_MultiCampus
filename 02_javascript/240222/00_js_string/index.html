@@ -67,7 +67,8 @@
             }
             return count;
         }
-        let lyrics = '문자로 콕콕콕콕콕콕 찍어서 보낸다';
+
+        let lyrics = '문자로 콕콕콕콕콕콕 찍어서 보낸다';  
         console.log(findCountStr(lyrics, '콕콕콕')); // 2
 
         // 문자열 str에서 문자열 target이 존재하는 n번째 위치를 반환
@@ -84,6 +85,9 @@
             return -1; // 찾지 못한 경우
         }
         findTargetIndex('Good morning, everyone. Beautiful morning.', 'morning', 2);
+        let exm = findTargetIndex(str_greeting, 'morning', 1)
+        console.log(exm);
+
 
         // // recursive 👍👍👍
         // function findTargetIndex2(str, target, n) {
