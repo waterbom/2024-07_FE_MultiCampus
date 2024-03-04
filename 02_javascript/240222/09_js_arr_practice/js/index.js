@@ -5,9 +5,11 @@ const title = document.querySelector("h1").innerText;
 const startIndex = title.indexOf('[');
 const endIndex = title.indexOf(']');
 const arrStr = title.slice(startIndex + 1, endIndex);
+console.log(arrStr);
 
 const nums = arrStr.split(", ");  // ["2","4","6","8","10"]
 showArray(origin, arr);
+
 
 let sum = 0
 for(let num of arr) {

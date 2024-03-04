@@ -49,3 +49,4 @@ const student = {
 
 let { name: studentName, scores:{kor, eng}, friends:[f1, f2, f3]} = student;
 console.log(name, kor, eng, f1, f2, f3);
+console.log(student);

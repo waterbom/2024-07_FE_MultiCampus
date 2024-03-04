@@ -9,10 +9,10 @@ function clearErr(e) {
 }
 
 // 이름 : 5글자까지만 입력
-const input_name = document.signupForm.name;
+const input_name = document.getElementById('user-name');
 input_name.addEventListener('blur', (e)=>{
     input_name.value = input_name.value.replaceAll(" ", "");
-    if (input_name.value != '' && input_name.value.length > 5) {
+    if (input_name.value.length > 5) {
         err(e, '5글자 이내만 사용가능합니다.');
         input_name.value = input_name.value.slice(0, 5);
         

@@ -23,17 +23,17 @@
         let animalRank = ['강아지', '고양이', '햄스터', '새' ,'뱀'];
         
         // 역순으로 배치
-        let worstAnimalRank = animalRank.reverse();
+        // let worstAnimalRank = animalRank.reverse();
         // console.log(worstAnimalRank);
         // console.log(animalRank);
 
         // 정렬
         animalRank.sort();
-        // console.log(animalRank);
+        console.log(animalRank);
 
-        // animalRank.sort((a, b) => {
-        //     return a.length - b.length;
-        // })
+        animalRank.sort((a, b) => {
+            return a.length - b.length;
+        })
         console.log(animalRank);
 
 
